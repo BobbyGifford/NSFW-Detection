@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Clarifai from "clarifai";
 import "./App.css";
 
+import Instructions from "./components/Instructions/Instructions";
 import InputHeader from "./components/InputHeader/InputHeader";
 import InputField from "./components/InputField/InputField";
 import OutputImage from "./components/OutputImage/OutputImage";
@@ -60,6 +61,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Instructions />
         <InputHeader />
         <InputField onChange={this.onChange} onSubmit={this.onSubmit} />
         {this.state.imageUrl ? (
